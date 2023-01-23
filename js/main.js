@@ -18,8 +18,13 @@ $(document).ready(function () {
             if(el.textContent == goal){
                 clearInterval(count);
             }
-        }, 9000 / goal);
+        }, 10000 / goal);
     }
+    $(".loader").fadeOut(4500, () => {
+      $("#last_spin").fadeOut(3000, () => {
+        $("body").css("overflow-y","auto")
+      })
+    })
 });
 let swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
