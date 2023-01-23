@@ -1,0 +1,1018 @@
+// Fonts Body
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+// var Colors 
+$opcity-color:#283645;
+$stick_hover:#334871;
+$blue-color:#0052FF;
+$opacity_blue_color:#0147d5;
+$white-color:#fff;
+$bg-color:#051E42;
+$black_color:#000000;
+$body_bg:#06182C;
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: $body_bg;
+    overflow-x: hidden;
+}
+*{
+    padding: 0; margin: 0;
+    outline: none; list-style: none;
+    transition: all .3s;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: $opcity-color;
+}
+::-webkit-scrollbar-thumb {
+    background: $blue-color;
+}
+a{
+    text-decoration: none;
+}
+.title_box{
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+    h2{
+        color: $white-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+    h3{
+        position: relative;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 1.2rem;
+        background: linear-gradient(108.18deg, #EA4C89 -12.02%, #4D44C6 60%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-left: 1rem;
+        &::before{
+            content: "";
+            position: absolute;
+            background: linear-gradient(108.18deg, #EA4C89 -12.02%, #4D44C6 60%);
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 20px;
+        }
+    }
+}
+.btn{
+    color: $white-color;
+    padding: 1rem 1.8rem;
+    border-radius: 0;
+    text-transform: uppercase;
+    &.btn_color_blue{
+        border: 1px solid $blue-color;
+        background-color: $blue-color;
+    }
+    &.btn_color{
+        background-color: $stick_hover;
+        border: 1px solid $opcity-color;
+    }
+}
+// start navbar
+.navbar{
+    &.active{
+        background-color: $bg-color;
+    }
+    background-color: $opcity-color;
+    padding: 1.5rem 0;
+    .navbar-toggler{
+        box-shadow: 0 0 0 0;
+        border: 0;
+        .fa-bars{
+            color: $white-color;
+            font-size: 1.5rem;
+            &:hover{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .navbar-nav{
+        .nav-link{
+            text-transform: uppercase;
+            padding: .9rem 0;
+            color: $white-color;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                color:$blue-color;
+            }
+        }
+    }
+    .offcanvas{
+        background-color: $opcity-color;
+        .offcanvas-header{
+            h5{
+                color: $white-color;
+            }
+        }
+        .offcanvas-body{
+            .main_register_nav{
+                display: flex;
+                justify-content: center;
+                padding: 2rem 0;
+                span{
+                    color: $white-color;
+                    padding: 0.8rem 1.5rem;
+                    cursor: pointer;
+                    &:first-child{
+                        border: 1px solid #CCB;
+                        &:hover{
+                            background-color: $white-color;
+                            color: $black_color;
+                        }
+                    }
+                    &:last-child{
+                        background-color: $blue-color;
+                        border: 1px solid $blue-color;
+                        &:hover{
+                            background-color: $opacity_blue_color;
+                            border: 1px solid $opacity_blue_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// start home
+.home{
+    height: 100vh;
+    position: relative;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .3);
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+    .box_home{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+        .title{
+            color: $white-color;
+            h1{
+                font-size: 3.6rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+            }
+            h2{
+                font-size: 1.5rem;
+                margin: 1rem 0 2rem; 
+            }
+            h3{
+                font-size: 1.8rem;
+                margin: 2rem 0;
+                span{
+                    color: $blue-color;
+                }
+            }
+        }
+        .btn{
+            &.btn_color_blue{
+                &:hover{
+                    color: $white-color;
+                    background-color: $opacity_blue_color;
+                }
+            }
+            &.btn_color{
+                &:hover{
+                    background-color: $white-color;
+                    color: $blue-color;
+                    border: 1px solid #CCB;
+                }
+            }
+        }
+        .home_img_sm{
+            position: absolute;
+            top: 25%;
+            right: 10%;
+            transform: translate(-50%,50%);
+            animation: rotate360 5s linear infinite;
+        }
+    }
+}
+// start about
+.about{
+    .title_about{
+        color: $white-color;
+        margin: 1rem 0 2rem;
+    }
+    .btn{
+        &.btn_color{
+            padding: 1rem 2rem;
+            background-color: #0C2E4E;
+            &:hover{
+                background-color: $blue-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+// gaming
+.gaming{
+    .box_play{
+        background-color: $opcity-color;
+        padding:3rem 2rem;
+        color: $white-color;
+        h3{
+            font-weight: bold;
+            text-transform: capitalize;
+            font-size: 1.8rem;
+        }
+        h4{
+            display: inline-block;
+            padding: .7rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, rgba(0, 82, 255, 0.3) 0%, transparent 95.61%);
+        }
+    }
+}
+// swiper_img
+.swiper_img{
+    .box_swiper{
+        background-color: $bg-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            border: 1px solid $bg-color;
+            display: flex;
+            padding: .1rem;
+            justify-content: center;
+            align-items: center;
+            height:300px;
+        }
+    }
+}
+// counter
+.counter{
+    .counter_box{
+        color: $white-color;
+        h2{
+            font-size: 3.5rem;
+            font-weight: bolder;
+        }
+        p{
+            font-size: 2rem;
+            text-transform: capitalize;
+            font-weight: 400;
+            color: $white-color;
+        }
+    }
+}
+// minting_Techniques
+.minting_Techniques{
+    .box_minting{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $blue-color;
+        padding: 3rem 2.5rem;
+        text-align: center;
+        .minting_info{
+            color: $white-color;
+            h2{
+                display: flex;
+                justify-content: center;
+                border-radius: 50px;
+                font-weight: bolder;
+                width: 50px;
+                height: 50px;
+                border: 4px dashed $white-color;
+                margin: auto;
+                padding: .2rem 1rem;
+            }
+            h3{
+                text-transform: capitalize;
+                font-weight: bold;
+                font-size: 1.9rem;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+// team
+.team {
+    .box_team{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $opcity-color;
+        padding: 1.5rem 1.3rem;
+        img{
+            width: 100%;
+            height: 175px;
+        }
+        .team_info{
+            color: $white-color;
+            text-align: center;
+            display: grid;
+            gap: 0.2rem;
+            padding-top: 1.5rem;
+            h5 , h6{
+                text-transform: capitalize;
+            }
+            h5{
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+            h6{
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            ul{
+                display: flex;
+                padding: 0;
+                justify-content: center;
+                a{
+                    color: $white-color;
+                    margin: 0 .6rem;
+                    font-size: 1.3rem;
+                    &:hover{
+                        color: $blue-color;
+                    }
+                }
+            }
+        }
+    }
+}
+// roadmap
+.roadmap{
+    .roadmap_box{
+        h2{
+            width: 65px;
+            height: 65px;
+            font-weight: bolder;
+            background-color: $blue-color;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            color: $white-color;
+            position: relative;
+            span{
+                position: absolute;
+                top: 4px;  right: 0;
+                font-size: .8rem;
+                background-color: $white-color;  color: $black_color;
+                width: 20px;  height: 20px;
+                display: grid;
+                align-items: center; justify-items: center;
+                border-radius: 50px;
+                line-height: 2px;
+            }
+        }
+        .roadmap_info{
+            margin-top: 2rem;
+            background-color: $opcity-color;
+            padding: 2rem .9rem;
+            color: $white-color;
+            h3{
+                display: inline-block;
+                background: linear-gradient(108.18deg, #EA4C89 -12.02%, #4D44C6 60%);
+                -webkit-background-clip:text;
+                -webkit-text-fill-color:transparent;
+            }
+            h4{
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+// faq
+.faq{
+    .accordion{
+        .accordion-item{
+            background-color: $opcity-color;
+            color: $white-color;
+            border: 0;
+            margin: 1rem 0;
+            .accordion-header{
+                .accordion-button{
+                    background-color: $opcity-color;
+                    color: $white-color;
+                    font-weight: bold;
+                    padding: 1.5rem;
+                    font-size: 1.5rem;
+                    box-shadow: 0 0 0 0;
+                    &:hover{
+                        background-color: $blue-color;
+                    }
+                    &::after{
+                        background-image: url('../image/plus.png');
+                    }
+                }
+            }
+            .accordion-body{
+                color: $white-color;
+                padding: 2rem 3rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+// blog
+.blog{
+    .blog_box{
+        position: relative;
+        &:hover .blog_img img{
+            transform: scale(1.1);
+        }
+        .blog_img{
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        .blog_info{
+            color: $white-color;
+            padding: 1.2rem 0;
+            a{
+                color: $white-color;
+                &:hover{
+                    color: $blue-color;
+                }
+                h3{
+                    font-size: 1.5rem;
+                    font-weight: bolder;
+                }
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+// access
+.access{
+    .access_bg{
+        background-color: $blue-color;
+        background:linear-gradient(108.18deg, rgba(234, 76, 137, 0.2) -2.02%, rgba(77, 68, 198, 0.2) 100%);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        color: $white-color;
+        padding: 4rem 9rem;
+        h2{
+            font-size: 3.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        div{
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0 5rem;
+            margin-bottom: 2rem;
+        }
+        .access_icons{
+            a{
+                color: $white-color;
+                span{
+                    display: inline-flex;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    align-items: center;
+                    text-transform: uppercase;
+                    padding:1rem 2rem;
+                    margin-left: 1rem;
+                    border: 1px solid $white-color;
+                    i{   margin: 0 .3rem; }
+                    &:hover{
+                        background-color: rgba(255, 255, 255, .1);
+                    }
+                    &.bg{
+                        background-color: $white-color;
+                        color: $black_color;
+                        &:hover{
+                            background-color: rgba(255, 255, 255, .1);
+                            color: $white-color;
+                        }
+                   }
+                }
+            }
+        }
+    }
+}
+// footer
+footer{
+    .footer_all{
+        display: flex;
+        justify-content: center;
+        .footer_img{
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            display: flex;
+            padding: 0;
+            justify-content: center;
+        }
+        .footer_link_icons{
+            padding: 2rem 0;
+            a{
+                margin: 0 .8rem;
+                background-color: $opcity-color;
+                color: $white-color;
+                padding: .6rem .9rem;
+                cursor: pointer;
+                font-size: 1.3rem;
+                &:hover{
+                    background-color: $blue-color;
+                    color: $white-color;
+                }
+            }
+        }
+        .footer_links{
+            a{
+                margin: 0 1.5rem;
+                text-transform: uppercase;
+                color: $white-color;
+                &:hover{
+                    color: $blue-color;
+                }
+            }
+        }
+        .text_p{
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
+            color: $white-color;
+        }
+    }
+}
+@keyframes rotate360 {
+    0%{
+        transform: rotate(-360deg);        
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+// media
+@media(max-width:991px){
+    .btn{
+        padding: 1rem 1.1rem;
+    }
+    .home{
+        .box_home{
+            display: inline-grid;
+            padding: 8rem 0;
+            .title{
+                h1{
+                    font-size: 2rem;
+                }
+                h2{
+                    font-size: 1.2rem;
+                }
+                h3{
+                    font-size: 1.4rem;
+                }
+            }
+            .home_img{
+                display: flex;
+                justify-content: end;
+                .hero{
+                    width: 30%;
+                }
+            }
+            .home_img_sm{
+                top: 60%;
+                right: 30%;
+            }
+        }
+    }
+    .about{
+        .title_about{
+            p{
+                font-size: .9rem;
+            }
+        }
+        .btn{
+            &.btn_color{
+                padding: 1rem 1.6rem;
+            }
+        }
+    }
+    .counter{
+        .counter_box{
+            h2{
+                font-size: 2.8rem;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .roadmap{
+        .roadmap_box{
+            .roadmap_info{
+                h3{
+                    font-size: 1.6rem;
+                }
+                h4{
+                    font-size: 1.6rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .blog{
+        .blog_box{
+            .blog_info{
+                p{
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    .access{
+        .access_bg{
+            padding: 4rem 0;
+            h2{
+                font-size: 2.4rem;
+            }
+            div{
+                padding: 0 2rem;
+                font-size: 1rem;
+            }
+            .access_icons{
+                a{
+                    span{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .btn{
+        padding: 1rem 1.1rem;
+    }
+    .home{
+        .box_home{
+            .title{
+                h1{
+                    font-size: 1.2rem;
+                }
+                h2{
+                    font-size: 1rem;
+                }
+                h3{
+                    font-size: 1.2rem;
+                }
+            }
+            .home_img{
+                display: flex;
+                justify-content: center;
+                .hero{
+                    width: 40%;
+                }
+            }
+            .home_img_sm{
+                display: none;
+            }
+        }
+    }
+    .title_box{
+        h2{
+            font-size: 2.2rem;
+        }
+        h3{
+            font-size: 1rem;
+            padding-left: 1rem;
+        }
+    }
+    .about{
+        .title_about{
+            p{
+                font-size: .9rem;
+            }
+        }
+        
+    }
+    .faq{
+        .accordion{
+            .accordion-item{
+                .accordion-header{
+                    .accordion-button{
+                        font-size: 1.2rem;
+                    }
+                }
+                .accordion-body{
+                    font-size: .9rem;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    .access{
+        .access_bg{
+            padding: 4rem 0;
+            h2{
+                font-size: 1.8rem;
+            }
+            div{
+                padding: 0 2rem;
+                font-size: .9rem;
+            }
+            .access_icons{
+                a{
+                    span{
+                        font-size: .9rem;
+                        margin-bottom: 1rem;
+                        &.bg{
+                            padding: 1rem 3rem;
+                       }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer_all{
+            .footer_links{
+                a{
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+}
+@media(max-width:590px){
+    .about{
+        .title_about{
+            p{
+                font-size: .8rem;
+            }
+        }
+    }
+    .title_box{
+        h2{
+            font-size: 2rem;
+        }
+    }
+    .roadmap{
+        .roadmap_box{
+            .roadmap_info{
+                h3 , h4{
+                    font-size: 1.4rem;
+                }
+                p{
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    .gaming{
+        .box_play{
+            padding:3rem 2rem;
+            h3{
+                font-size: 1.4rem;
+            }
+            p{
+                font-size: .8rem;
+            }
+        }
+    }
+    .access{
+        .access_bg{
+            padding: 4rem 0;
+            h2{
+                font-size: 1.6rem;
+            }
+            div{
+                padding: 0 1.5rem;
+                font-size: .8rem;
+            }
+        }
+    }
+    .minting_Techniques{
+        .box_minting{
+            .minting_info{
+                h3{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .team {
+        .box_team{
+            .team_info{
+                h5{
+                    font-size: 1.3rem;
+                }
+                h6{
+                    font-size: .9rem;
+                }
+                ul{
+                    a{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+    .roadmap{
+        .roadmap_box{
+            h2{
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+                span{
+                    top: 3px; right: -4px;
+                    font-size: .6rem;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            .roadmap_info{
+                h4{
+                    font-size: 1.4rem;
+                }
+                p{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+    footer{
+        .footer_all{
+            .footer_links{
+                a{
+                    margin: 0 .8rem;
+                }
+            }
+        }
+    }
+}
+@media(max-width:450px){
+    .home{
+        .box_home{
+            .title{
+                h1{
+                    font-size: 1.1rem;
+                }
+                h2{
+                    font-size: .8rem;
+                }
+                h3{
+                    font-size: 1rem;
+                }
+            }
+            .home_img{
+                .hero{
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .title_box{
+        h2{
+            font-size: 1.6rem;
+        }
+        h3{
+            font-size: .9rem;
+        }
+    }
+    .minting_Techniques{
+        .box_minting{
+            .minting_info{
+                h3{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .faq{
+        .accordion{
+            .accordion-item{
+                .accordion-header{
+                    .accordion-button{
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    .blog{
+        .blog_box{
+            .blog_info{
+                a{
+                    h3{
+                        font-size: 1.2rem;
+                        font-weight: bolder;
+                    }
+                }
+                p{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+    .access{
+        .access_bg{
+            padding: 4rem 0;
+            h2{
+                font-size: 1.2rem;
+            }
+            div{
+                padding: 0 1rem;
+                font-size: .8rem;
+            }
+        }
+    }
+    footer{
+        .footer_all{
+            .footer_link_icons{
+                padding: 2rem 0;
+                a{
+                    margin: 0 .8rem;
+                    padding: .4rem .8rem;
+                    font-size: 1.3rem;
+                }
+            }
+            .footer_links{
+                a{
+                    margin: 0 .5rem;
+                }
+            }
+            .text_p{
+                font-size: .8rem;
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+@media(max-width:400px){
+    .title_box{
+        h2{
+            font-size: 1.4rem;
+        }
+    }
+    .btn{
+        padding: .9rem .8rem;
+    }
+    .about{
+        .title_about{
+            p{
+                font-size: .7rem;
+            }
+        }
+        .btn{
+            &.btn_color{
+                padding:.9rem 1rem;
+            }
+        }
+    }
+    .access{
+        .access_bg{
+            padding: 4rem 0;
+            h2{
+                font-size: 1rem;
+            }
+            div{
+                padding: 0 1rem;
+                font-size: .7rem;
+            }
+        }
+    }
+    footer{
+        .footer_all{
+            .footer_link_icons{
+                a{
+                    padding: 0.6rem 0.8rem;
+                    font-size: 1rem;
+                }
+            }
+            .footer_links{
+                a{
+                    margin: 0 .3rem;
+                }
+            }
+            .text_p{
+                font-size: .8rem;
+            }
+        }
+    }
+}
