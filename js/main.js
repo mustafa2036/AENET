@@ -28,10 +28,10 @@ $(document).ready(function () {
 });
 let swiper = new Swiper(".mySwiper", {
     spaceBetween: 10,
-    slidesPerView: 6,
+    slidesPerView: 4,
     loop: true,
     autoplay: {
-        delay: 1000,
+        delay: 900,
         disableOnInteraction: false,
     },
     navigation: {
@@ -52,7 +52,7 @@ let swiper = new Swiper(".mySwiper", {
           slidesPerView: 3,
         },
         1024: {
-          slidesPerView: 6,
+          slidesPerView: 4,
         },
     },
   });
